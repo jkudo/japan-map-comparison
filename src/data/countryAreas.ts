@@ -181,7 +181,12 @@ export const COUNTRY_DATA: Record<string, CountryData> = {
   BS: { nameJa: 'バハマ',           nameEn: 'The Bahamas',          areaKm2: 13943 },
   FK: { nameJa: 'フォークランド諸島', nameEn: 'Falkland Islands',   areaKm2: 12173 },
   EH: { nameJa: '西サハラ',         nameEn: 'Western Sahara',       areaKm2: 266000 },
-  'CN-TW': { nameJa: '台湾',        nameEn: 'Taiwan',               areaKm2: 36193 },
+  BE: { nameJa: 'ベルギー',         nameEn: 'Belgium',              areaKm2: 30528 },
+  AQ: { nameJa: '南極',             nameEn: 'Antarctica',           areaKm2: 14200000 },
+  TF: { nameJa: '仏南方・南極地域', nameEn: 'French Southern Territories', areaKm2: 439781 },
+  XK: { nameJa: 'コソボ',           nameEn: 'Kosovo',               areaKm2: 10887 },
+  XC: { nameJa: '北キプロス',       nameEn: 'Northern Cyprus',      areaKm2: 3355 },
+  XS: { nameJa: 'ソマリランド',     nameEn: 'Somaliland',           areaKm2: 137600 },
 
   '-1': { nameJa: '海上・不明',     nameEn: 'Ocean / Unknown',      areaKm2: 0 },
 };
