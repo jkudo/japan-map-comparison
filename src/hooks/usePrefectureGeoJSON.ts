@@ -47,7 +47,7 @@ export function usePrefectureGeoJSON(code: number | null): GeoJSONResult {
 
     const url =
       code === JAPAN_WHOLE_CODE
-        ? '/japan_outline.geojson'
+        ? `${import.meta.env.BASE_URL}japan_outline.geojson`
         : prefectureUrl(code);
 
     fetch(url, { signal: controller.signal })
