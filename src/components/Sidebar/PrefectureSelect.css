@@ -1,0 +1,63 @@
+.prefecture-select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.select-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.select-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  appearance: auto;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.select-input:focus {
+  border-color: #4285f4;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.15);
+}
+
+@media (max-width: 1024px) {
+  .select-input {
+    font-size: 16px; /* iOS でズームしない最小サイズ */
+  }
+}
+
+@media (max-width: 480px) {
+  .prefecture-select {
+    gap: 4px;
+  }
+
+  .select-label {
+    font-size: 12px;
+  }
+
+  .select-input {
+    padding: 8px 10px;
+  }
+}
+
+/* タブレット横並び時: セレクトを compact に */
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+  .select-label {
+    font-size: 12px;
+  }
+
+  .select-input {
+    padding: 10px 8px;
+  }
+}

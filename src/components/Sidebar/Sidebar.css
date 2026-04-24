@@ -1,0 +1,78 @@
+.sidebar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
+  color: #fff;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #fff;
+}
+
+.sidebar-title span {
+  color: #ffd54f;
+}
+
+.sidebar-subtitle {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.85;
+}
+
+.sidebar-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* タブレット縦向き・横向き共通ヘッダー縮小 */
+@media (max-width: 1024px) {
+  .sidebar-header {
+    padding: 10px 16px;
+  }
+
+  .sidebar-title {
+    font-size: 17px;
+    margin-bottom: 2px;
+  }
+
+  .sidebar-subtitle {
+    font-size: 12px;
+  }
+}
+
+/* タブレット（481px〜）: 選択UI と統計を横並び */
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: portrait) {
+  .sidebar-body {
+    flex-direction: row;
+    align-items: stretch;
+    padding: 10px 12px;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .sidebar-body > .prefecture-select {
+    flex: 0 0 200px;
+    padding-right: 12px;
+  }
+}
+
+/* スマホ（〜480px）: 縦積みのまま compact に */
+@media (max-width: 480px) {
+  .sidebar-body {
+    padding: 8px 12px;
+    gap: 6px;
+  }
+}
+

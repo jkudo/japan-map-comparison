@@ -1,0 +1,67 @@
+.layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.layout-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.layout-map {
+  flex: 1;
+  position: relative;
+}
+
+/* タブレット縦向き */
+@media (max-width: 1024px) and (orientation: portrait) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .layout-sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 38vh;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    overflow-y: auto;
+  }
+
+  .layout-map {
+    flex: 1;
+    min-height: 0;
+  }
+}
+
+/* タブレット横向き */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  .layout-sidebar {
+    width: 300px;
+  }
+}
+
+/* スマートフォン */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .layout-sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 30vh;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    overflow-y: auto;
+  }
+
+  .layout-map {
+    flex: 1;
+    min-height: 0;
+  }
+}
